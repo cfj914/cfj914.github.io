@@ -1,0 +1,18 @@
+微信：https://linux.weixin.qq.com
+qq:https://im.qq.com
+vscode:https://code.visualstudio.com/download
+钉钉：https://www.dingtalk.com/
+compare:
+	wget https://www.scootersoftware.com/bcompare-4.4.6.27483_amd64.deb
+	sudo apt update
+	sudo apt install ./bcompare-4.4.6.27483_amd64.deb  # 替换为实际文件名
+	好像不免费 30天到期后需要执行一下这个。
+	# 删除配置文件（适用于手动安装到/usr/lib/beyondcompare的情况）
+	cd ~/.config/bcompare/
+	rm registry.dat
+termius:
+	https://termius.com/download/linux
+
+软件卸载：
+	基础卸载（保留配置文件）‌：sudo apt remove 软件包名称
+	完全卸载（删除配置文件）‌：sudo apt purge 软件包名称

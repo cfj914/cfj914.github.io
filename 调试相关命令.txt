@@ -78,6 +78,9 @@ SocComCmd heartmonitor stop
 fastboot flash hyp_a mifs_hyp_la.img
 fastboot flash ifs2_a ifs2_la.img
 fastboot flash system_a system_la.img.sparse
+fastboot flash hyp_b mifs_hyp_la.img
+fastboot flash ifs2_b ifs2_la.img
+fastboot flash system_b system_la.img.sparse
 
 9 QCOM camera架构
 https://blog.csdn.net/KLYAZWS/article/details/121291508
@@ -261,3 +264,20 @@ qualcom/sn8155/74X2622/develop/yingchi_apa
 	
 	
 	git push origin HEAD:refs/for/qualcom/sn8155/75A322/develop/main
+	
+	
+24 
+adb push ./AVMService /data/nfs/share
+
+qnx串口执行：
+	cd /share/
+	chmod +x AVMService
+	mount -o remount rw/
+    mv AVMService /usr/bin/AVMService
+	sync
+	reset
+
+adb push ./AvmService /system/app/
+adb push ./AVM /system/priv-app/
+adb push ./com.omosoft.avmlib.jar /system/framework/
+adb pull /data/tsplogtool/logcat /log/
