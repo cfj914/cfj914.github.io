@@ -55,9 +55,6 @@ AI账号密码：
 	chenfujie@bicv.com
 	efD2sdw@
 
-apple账号：
-	1284556499@qq.com
-	HekbHSD896#
 B30X-J6M密码： BAIC#B30X#2025
 	adb 命令也可以：
 	adb shell am start -n com.chinatsp.engineermode/.MainActivity
